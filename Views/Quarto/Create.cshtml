@@ -1,0 +1,52 @@
+﻿@model PmwebProjeto.Models.Quarto
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Cadastro de Quarto</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeroOcupantes" class="control-label"> Numero de Ocupantes </label>
+                <input asp-for="NumeroOcupantes" class="form-control" />
+                <span asp-validation-for="NumeroOcupantes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeroAdultos" class="control-label"> Adultos</label>
+                <input asp-for="NumeroAdultos" class="form-control" />
+                <span asp-validation-for="NumeroAdultos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeroCriancas" class="control-label"> Crianças </label>
+                <input asp-for="NumeroCriancas" class="form-control" />
+                <span asp-validation-for="NumeroCriancas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Preco" class="control-label"></label>
+                <input asp-for="Preco" class="form-control" />
+                <span asp-validation-for="Preco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HotelId" class="control-label"> Hotel </label>
+                <select asp-for="HotelId" class ="form-control" asp-items="ViewBag.HotelId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
